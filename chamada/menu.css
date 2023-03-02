@@ -9,7 +9,10 @@ body {
 }
 
 
-
+h2{
+    text-align: center;
+    color: #d3a707;
+}
 
 
 /* Estilização do formulário de cadastro de alunos */
@@ -17,6 +20,7 @@ body {
     width: 400px;
     margin: 0 auto;
     padding: 10px;
+    padding-bottom: 120px;
 }
 
 .formulario-aluno label,
