@@ -1,0 +1,71 @@
+/* Definição de estilos para a página de cadastrados */
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+
+
+/* Estilos específicos para as opções de remanejamento e exclusão */
+form:first-of-type {
+    margin-right: 10px;
+}
+
+form:last-of-type {
+    margin-left: 10px;
+}
