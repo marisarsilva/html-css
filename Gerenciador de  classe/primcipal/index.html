@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chamada</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Gerenciamento de Turmas</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/chamada/menu.html">Página
+                                inicial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/chamada/menu/sobre.html">Sobre</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Cadastros
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#cad-aluno">Cadastro de Alunos</a></li>
+                                <li><a class="dropdown-item" href="#cad-professor">Cadastro Professores</a></li>
+                                <li><a class="dropdown-item" href="#cad-turma">Cadastro de Turmas</a></li>
+                               
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Cadastrados
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#cad-aluno-result">Cadastro de Alunos</a></li>
+                                <li><a class="dropdown-item"
+                                        href="#cad-professor-result">Cadastro Professores</a></li>
+                                        <li><a class="dropdown-item"
+                                            href="#cad-turma-result">Cadastro Turmas</a></li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Página de cadastros</h1>
+
+        <h2 id="cad-aluno">Cadastro de Alunos</h2>
+        <form class="formulario-aluno">
+            <label for="matricula">Matrícula:</label>
+            <input type="text" id="matricula" name="matricula"><br><br>
+
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome"><br><br>
+
+            <label for="turma_aluno">Turma:</label>
+            <input type="text" id="turma_aluno" name="turma_aluno"><br><br>
+
+            <input type="submit" value="Cadastrar Aluno">
+        </form>
+
+        <h2 id="cad-professor">Cadastro de Professores</h2>
+        <form class="formulario-professor">
+            <label for="nome_professor">Nome Completo:</label>
+            <input type="text" id="nome_professor" name="nome_professor"><br><br>
+
+            <label for="turma_professor">Turma:</label>
+            <input type="text" id="turma_professor" name="turma_professor"><br><br>
+
+            <input type="submit" value="Cadastrar Professor">
+        </form>
+
+        <h2 id="cad-turma">Cadastro de Turmas</h2>
+        <form class="formulario-turma">
+            <label for="nome_turma">Nome da Turma:</label>
+            <input type="text" id="nome_turma" name="nome_turma"><br><br>
+
+            <label for="periodo">Período:</label>
+            <input type="radio" id="matutino" name="periodo" value="matutino">
+            <label for="matutino">Matutino</label>
+            <input type="radio" id="vespertino" name="periodo" value="vespertino">
+            <label for="vespertino">Vespertino</label><br><br>
+
+            <input type="submit" value="Cadastrar Turma">
+
+    </main>
+    <footer>
+        @ todos os direitos reservados
+        by Marisa Rodrigues da Silva
+
+    </footer>
+
+</body>
+
+</html>

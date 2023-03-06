@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+h2{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+
+    color: #f36d00;
+    text-align: center;
+}
+
+/* Estilização do formulário de cadastro de alunos */
+.formulario-aluno {
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.formulario-aluno label,
+.formulario-aluno input,
+.formulario-aluno select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.formulario-aluno label {
+    color: #333;
+}
+
+.formulario-aluno input,
+.formulario-aluno select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.formulario-aluno input:focus,
+.formulario-aluno select:focus {
+    outline: none;
+    border-color: #008080;
+}
+
+.formulario-aluno input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilização do formulário de cadastro de professores */
+.formulario-professor {
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.formulario-professor label,
+.formulario-professor input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.formulario-professor label {
+    color: #333;
+}
+
+.formulario-professor input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.formulario-professor input:focus {
+    outline: none;
+    border-color: #008080;
+}
+
+.formulario-professor input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilização do formulário de cadastro de turmas */
+.formulario-turma {
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.formulario-turma label,
+.formulario-turma input,
+.formulario-turma select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.formulario-turma label {
+    color: #333;
+}
+
+.formulario-turma input,
+.formulario-turma select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.formulario-turma input:focus,
+.formulario-turma select:focus {
+    outline: none;
+    border-color: #008080;
+}
+
+.formulario-turma input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
