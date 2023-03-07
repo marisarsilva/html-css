@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lista de Alunos</title>
+    <link rel="stylesheet" href="/gerenciador-v-2/style.css">
+    <link rel="stylesheet" href="/gerenciador-v-2/index.html">
+</head>
+
+<body>
+    <header>
+        <h1>Lista de Alunos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="aluno-form.html">Cadastrar Aluno</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <table id="aluno-table"></table>
+    </main>
+    <script type="module" src="database.js"></script>
+    <script type="module">
+        import { renderAlunoTable } from './aluno.js';
+        import { getAlunos } from './database.js';
+        const table = document.getElementById('aluno-table');
+        getAlunos().then(alunos => {
+            renderAlunoTable(table, alunos);
+        });
+    </script>
+</body>
+
+</html>
