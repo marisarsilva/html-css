@@ -29,3 +29,19 @@ const router = new Router(routes);
 
 // Inicia o roteador do Angular
 router.init();
+
+// Função para buscar e renderizar o componente "turma-form"
+async function renderTurmaForm() {
+    const turmaForm = document.querySelector('turma-form');
+  
+    // Faz uma requisição para buscar o conteúdo do arquivo "turma-form.html"
+    const response = await fetch('components/turma-form.html');
+    const html = await response.text();
+  
+    // Define o conteúdo do componente "turma-form" como o HTML do arquivo "turma-form.html"
+    turmaForm.innerHTML = html;
+  }
+  
+  // Chama a função para renderizar o componente "turma-form"
+  renderTurmaForm();
+  
