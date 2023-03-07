@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,22 +10,42 @@
     <script>
         // Função para buscar a lista de professores cadastrados no banco de dados
         function getProfessores() {
-          // Aqui você deve fazer uma requisição para o servidor para buscar a lista de professores
-          // e preencher o campo <select> com os valores retornados
+            // Aqui você deve fazer uma requisição para o servidor para buscar a lista de professores
+            // e preencher o campo <select> com os valores retornados
         }
-      
+
         // Função para buscar a lista de alunos cadastrados no banco de dados
         function getAlunos() {
-          // Aqui você deve fazer uma requisição para o servidor para buscar a lista de alunos
-          // e preencher o campo <select> com os valores retornados
+            // Aqui você deve fazer uma requisição para o servidor para buscar a lista de alunos
+            // e preencher o campo <select> com os valores retornados
         }
-      
+
         // Chamando as funções para buscar a lista de professores e alunos
         getProfessores();
         getAlunos();
-      </script>
-      
+    </script>
+    <script>
+        // Função para enviar os dados do formulário para o servidor
+        function cadastrarTurma(event) {
+            event.preventDefault(); // previne o comportamento padrão do formulário
+
+            const form = document.getElementById('turma-form');
+            const nomeTurma = form.elements['nome-turma'].value;
+            const professorTurma = form.elements['professor-turma'].value;
+            const alunosTurma = form.elements['alunos-turma'].selectedOptions;
+
+            // Aqui você deve fazer uma requisição para o servidor para cadastrar a nova turma
+            // com os dados informados no formulário
+        }
+
+        // Adicionando um evento de submit ao formulário para chamar a função cadastrarTurma
+        const form = document.getElementById('turma-form');
+        form.addEventListener('submit', cadastrarTurma);
+    </script>
+
+
 </head>
+
 <body>
 
     <main>
@@ -34,26 +55,27 @@
         <form id="turma-form">
             <label for="nome-turma">Nome da Turma:</label>
             <input type="text" id="nome-turma" name="nome-turma"><br>
-          
+
             <label for="professor-turma">Professor da Turma:</label>
             <select id="professor-turma" name="professor-turma">
-              <option value="">Selecione um Professor</option>
-              <!-- Aqui você deve incluir a lista de professores cadastrados no banco de dados -->
+                <option value="">Selecione um Professor</option>
+                <!-- Aqui você deve incluir a lista de professores cadastrados no banco de dados -->
             </select><br>
-          
+
             <label for="alunos-turma">Alunos da Turma:</label>
             <select id="alunos-turma" name="alunos-turma" multiple>
-              <option value="">Selecione os Alunos</option>
-              <!-- Aqui você deve incluir a lista de alunos cadastrados no banco de dados -->
+                <option value="">Selecione os Alunos</option>
+                <!-- Aqui você deve incluir a lista de alunos cadastrados no banco de dados -->
             </select><br>
-          
+
             <button type="submit">Cadastrar Turma</button>
-          </form>
-          
+        </form>
+
     </main>
     <footer>
-        
+
     </footer>
-    
+
 </body>
+
 </html>
