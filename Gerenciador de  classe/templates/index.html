@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sistema Escolar</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Sistema Escolar</h1>
+    </header>
+
+    <main>
+      <section id="cadastrar-aluno">
+        <h2>Cadastrar Aluno</h2>
+        <form>
+          <label for="nome-aluno">Nome:</label>
+          <input type="text" id="nome-aluno" name="nome-aluno" required /><br />
+
+          <label for="email-aluno">E-mail:</label>
+          <input type="email" id="email-aluno" name="email-aluno" required /><br />
+
+          <label for="telefone-aluno">Telefone:</label>
+          <input type="tel" id="telefone-aluno" name="telefone-aluno" required /><br />
+
+          <label for="turma-aluno">Turma:</label>
+          <select id="turma-aluno" name="turma-aluno" required>
+            <option value="" disabled selected hidden>Selecione uma turma</option>
+            <!-- Opções das turmas devem ser geradas dinamicamente -->
+          </select><br />
+
+          <input type="submit" value="Cadastrar" />
+          <input type="reset" value="Limpar" />
+        </form>
+      </section>
+
+      <section id="cadastrar-professor">
+        <h2>Cadastrar Professor</h2>
+        <form>
+          <label for="nome-professor">Nome:</label>
+          <input type="text" id="nome-professor" name="nome-professor" required /><br />
+
+          <label for="email-professor">E-mail:</label>
+          <input type="email" id="email-professor" name="email-professor" required /><br />
+
+          <label for="telefone-professor">Telefone:</label>
+          <input type="tel" id="telefone-professor" name="telefone-professor" required /><br />
+
+          <label for="horario-professor">Horário:</label>
+          <select id="horario-professor" name="horario-professor" required>
+            <option value="" disabled selected hidden>Selecione um horário</option>
+            <!-- Opções dos horários devem ser geradas dinamicamente -->
+          </select><br />
+
+          <input type="submit" value="Cadastrar" />
+          <input type="reset" value="Limpar" />
+        </form>
+      </section>
+
+    <section id="cadastrar-turma">
+      <h2>Cadastrar Turma</h2>
+      <div class="form-container">
+        <form id="form-cadastrar-turma">
+          <label for="nome-turma">Nome:</label>
+          <input type="text" id="nome-turma" name="nome-turma" required>
+  
+          <label for="periodo-turma">Período:</label>
+          <select id="periodo-turma" name="periodo-turma" required>
+            <option value="" disabled selected hidden>Selecione um período</option>
+            <option value="Matutino">Matutino</option>
+            <option value="Vespertino">Vespertino</option>
+          </select>
+  
+          <label for="professor-turma">Professor:</label>
+          <select id="professor-turma" name="professor-turma" required>
+            <option value="" disabled selected hidden>Selecione um professor</option>
+            <!-- Aqui serão adicionados os professores cadastrados via JS -->
+          </select>
+  
+          <label for="alunos-turma">Alunos:</label>
+          <select id="alunos-turma" name="alunos-turma" multiple required>
+            <option value="" disabled selected hidden>Selecione pelo menos um aluno</option>
+            <!-- Aqui serão adicionados os alunos cadastrados via JS -->
+          </select>
+  
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+          <button type="button" class="btn btn-secondary" onclick="limparFormularioTurma()">Limpar Formulário</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="cadastrar-atividade">
+      <div class="container">
+        <h2>Cadastrar Atividade</h2>
+        <form>
+          <label for="nome-atividade">Nome da Atividade:</label>
+          <input type="text" id="nome-atividade" name="nome-atividade" required>
+    
+          <label for="tipo-atividade">Tipo de Atividade:</label>
+          <select id="tipo-atividade" name="tipo-atividade" required>
+            <option value="" disabled selected hidden>Selecione um tipo de atividade</option>
+            <option value="Prova">Prova</option>
+            <option value="Trabalho">Trabalho</option>
+            <option value="Apresentação">Apresentação</option>
+            <option value="Exercício">Exercício</option>
+          </select>
+    
+          <label for="descricao-atividade">Descrição:</label>
+          <textarea id="descricao-atividade" name="descricao-atividade" rows="3"></textarea>
+    
+          <label for="data-entrega">Data de Entrega:</label>
+          <input type="date" id="data-entrega" name="data-entrega" required>
+    
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+          <button type="button" class="btn btn-secondary" onclick="limparFormularioAtividade()">Limpar Formulário</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="relatorios">
+      <div class="container">
+        <h2>Relatórios</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Relatório de Alunos</h3>
+            <p>Selecione uma turma:</p>
+            <select id="turmas-relatorio-alunos" name="turmas-relatorio-alunos">
+              <option value="" disabled selected hidden>Selecione uma turma</option>
+              <!-- Aqui devem ser adicionadas as opções de turmas -->
+            </select>
+            <button type="button" class="btn btn-primary">Gerar Relatório</button>
+          </div>
+          <div class="col-md-6">
+            <h3>Relatório de Atividades</h3>
+            <p>Selecione uma turma:</p>
+            <select id="turmas-relatorio-atividades" name="turmas-relatorio-atividades">
+              <option value="" disabled selected hidden>Selecione uma turma</option>
+              <!-- Aqui devem ser adicionadas as opções de turmas -->
+            </select>
+            <p>Selecione uma atividade:</p>
+            <select id="atividades-relatorio" name="atividades-relatorio">
+              <option value="" disabled selected hidden>Selecione uma atividade</option>
+              <!-- Aqui devem ser adicionadas as opções de atividades -->
+            </select>
+            <button type="button" class="btn btn-primary">Gerar Relatório</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+  
